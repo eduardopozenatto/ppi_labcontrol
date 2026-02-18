@@ -40,7 +40,7 @@ h1 {
     border: 1px solid var(--faded-azure-color);
     border-radius: 10px;
     height: auto;
-    width: 175px;
+    width: 200px;
     margin: 0 auto;
     justify-content: start;
     align-items: center;
@@ -68,6 +68,8 @@ h1 {
 #signup-title,
 .recovery-password-title,
 .back-title {
+    display: flex;
+    flex-wrap: nowrap;
     margin-top: 8px;
     display: flex;
     font-size: 8px;
@@ -79,6 +81,8 @@ h1 {
 #signup-title > a,
 .recovery-password-title > a,
 .back-title {
+    display: flex;
+    flex-wrap: nowrap;
     text-decoration: none;
 }
 
@@ -127,6 +131,10 @@ h1 {
     color: var(--gray-azure-color);
 }
 
+.recovery-password-title {
+    width: 100px;
+}
+
 /* Formulário que contém os inputs */
 
 form {
@@ -139,10 +147,20 @@ form {
     gap: 8px;
 }
 
+/* p do formulário de recuperação de senha */
+
+.recovery-form > p {
+    color: var(--gray-azure-color);
+    font-size: 6px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
 /* Inputs dos formulários */ 
 
 .login-form > form > input,
-.signup-form > form > input {
+.signup-form > form > input,
+.recovery-form > form > input {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,7 +176,8 @@ form {
 }
 
 .login-form > form > input:focus,
-.signup-form > form > input:focus {
+.signup-form > form > input:focus,
+.recovery-form > form input:focus {
     border-color: var(--azure-pastel-color);
     box-shadow: 0 0 0 1px var(--azure-pastel-color);
 }
@@ -219,7 +238,8 @@ input[type="number"] {
 }
 
 .entry-button,
-.signup-button {
+.signup-button,
+.send-button {
     background-color: var(--azure-pastel-color);
     border: none;
     font-size: 6px;
@@ -230,20 +250,27 @@ input[type="number"] {
     transition: background-color 0.5s ease;
 }
 
+.send-button {
+    margin: 10px 0 10px 0;
+}
+
 .entry-link,
-.signin-link {
+.signin-link,
+.send-link {
     color: whitesmoke;
     text-decoration: none;
     transition: color 0.5s ease;
 }
 
 .entry-button:hover,
-.signup-button:hover {
+.signup-button:hover,
+.send-button:hover {
     background-color: var(--azure-pastel-color-focus);
 }
 
 .entry-button:hover > a,
-.signup-button:hover > a {
+.signup-button:hover > a,
+.send-button:hover > a {
     color: whitesmoke;
 }
 
