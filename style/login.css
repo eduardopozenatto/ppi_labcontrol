@@ -185,9 +185,20 @@ input[type="number"] {
     text-decoration: underline var(--azure-pastel-color);
 }
 
-hr {
+.login-form > hr {
     background-color: var(--azure-pastel-color-focus);
     border: none;
+    margin-top: 10px;
+    height: 1px;
+    opacity: .2;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.signup-form > hr {
+    background-color: var(--azure-pastel-color-focus);
+    border: none;
+    margin-top: 15px;
     height: 1px;
     opacity: .2;
     border-radius: 10px;
@@ -233,6 +244,7 @@ hr {
 .click-here-signup,
 .click-here-login {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .click-here-signup > a,
