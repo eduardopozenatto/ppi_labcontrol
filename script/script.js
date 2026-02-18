@@ -20,4 +20,3 @@ signups.forEach(function(signup) {
 
     });
 });
-

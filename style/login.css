@@ -17,6 +17,7 @@
     box-sizing: border-box;
 }
 
+/* título global LabControl */
 
 h1 {
     color: var(--gray-azure-color);
@@ -29,7 +30,7 @@ h1 {
     margin-bottom: 15px;
 }
 
-/* Seção do formulário */
+/* Section que contém os formulários de login e cadastro */
 
 .login-form,
 .signup-form {
@@ -58,7 +59,7 @@ h1 {
     gap: 15px;
 }
 
-/* Botão de login e cadastro */
+/* Botões de login e cadastro */
 
 #login-title,
 #signup-title {
@@ -125,7 +126,7 @@ form {
     gap: 8px;
 }
 
-/* Input de E-mail e Senha */ 
+/* Inputs dos formulários */ 
 
 .login-form > form > input,
 .signup-form > form > input {
@@ -149,7 +150,18 @@ form {
     box-shadow: 0 0 0 1px var(--azure-pastel-color);
 }
 
-/* Botão de "esqueci a senha" e "clicar aqui" */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Botões de "esqueci a senha", "entrar", "cadastrar-se" e "clicar aqui" */
 
 .forgot-password > a,
 .click-here-signup > a,
