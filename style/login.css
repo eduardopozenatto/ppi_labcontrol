@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos globais */
+
+:root {
+    --gray-azure-color: #404b52;
+    --faded-azure-color: #adbfca;
+    --azure-pastel-color : #8dbdd9;
+    --azure-pastel-color-focus: #7297ac;
+    --border-radius: 10px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-azure-color);
+    box-sizing: border-box;
+}
+
+
+h1 {
+    color: var(--gray-azure-color);
+    font-family: 'Bree serif', sans-serif;
+    display: flex;
+    font-size: 15px;
+    font-weight: lighter;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Seção do formulário */
+
+.login-form,
+.signup-form {
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid var(--faded-azure-color);
+    border-radius: 10px;
+    height: auto;
+    width: 175px;
+    margin: 0 auto;
+    justify-content: start;
+    align-items: center;
+}
+
+.signup-form {
+    display: none;
+}
+
+/* Div que contém os títulos de cadastro e login */
+
+.login-form > div,
+.signup-form > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Botão de login e cadastro */
+
+#login-title,
+#signup-title {
+    margin-top: 8px;
+    display: flex;
+    font-size: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-title > a,
+#signup-title > a {
+    text-decoration: none;
+}
+
+#login-title {
+    border: none;
+    display: flex;
+    padding: 5px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azure-pastel-color);
+    border-radius: var(--border-radius);
+    transition: background-color 0.5s ease;
+}
+
+#login-title:hover {
+    background-color: var(--azure-pastel-color-focus);
+}
+
+#login-title > a {
+    color: white;
+    transition: color 0.5s ease;
+}
+
+#login-title:hover > a {
+    color: whitesmoke;
+}
+
+#signup-title {
+    background-color: white;
+    border: none; 
+}
+
+#signup-title > a {
+    color: var(--faded-azure-color);
+    transition: color 0.5s ease;
+}
+
+#signup-title:hover > a {
+    color: var(--gray-azure-color);
+}
+
+/* Formulário que contém os inputs */
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+/* Input de E-mail e Senha */ 
+
+.login-form > form > input,
+.signup-form > form > input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    font-size: 5px;
+    padding-left: 5px;
+    height: 15px;
+    border: 1px solid var(--faded-azure-color);
+    border-radius: var(--border-radius);
+    color: var(--faded-azure-color);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-form > form > input:focus,
+.signup-form > form > input:focus {
+    border-color: var(--azure-pastel-color);
+    box-shadow: 0 0 0 1px var(--azure-pastel-color);
+}
+
+/* Botão de "esqueci a senha" e "clicar aqui" */
+
+.forgot-password > a,
+.click-here-signup > a,
+.click-here-login > a {
+    text-decoration: none;
+    color: var(--azure-pastel-color);
+}
+
+.forgot-password {
+    font-size: 5px;
+    margin-top: 5px;
+    align-self: flex-end;
+    margin-right: 15px;
+    text-decoration-color: var(--azure-pastel-color);
+    transition: text-decoration 0.3s ease-in-out;
+}
+
+.forgot-password:hover,
+.click-here-signup > a:hover,
+.click-here-login > a:hover {
+    text-decoration: underline var(--azure-pastel-color);
+}
+
+hr {
+    background-color: var(--azure-pastel-color-focus);
+    border: none;
+    height: 1px;
+    opacity: .2;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.entry-button,
+.signup-button {
+    background-color: var(--azure-pastel-color);
+    border: none;
+    font-size: 6px;
+    border-radius: var(--border-radius);
+    padding: 5px;
+    margin-top: 5px;
+    width: 60px;
+    transition: background-color 0.5s ease;
+}
+
+.entry-link,
+.signin-link {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+.entry-button:hover,
+.signup-button:hover {
+    background-color: var(--azure-pastel-color-focus);
+}
+
+.entry-button:hover > a,
+.signup-button:hover > a {
+    color: whitesmoke;
+}
+
+.click-here-signup,
+.click-here-signup > a,
+.click-here-login,
+.click-here-login > a {
+    font-size: 6px;
+}
+
+.click-here-signup,
+.click-here-login {
+    margin-top: 10px;
+}
+
+.click-here-signup > a,
+.click-here-login > a {
+    display: inline-block;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
