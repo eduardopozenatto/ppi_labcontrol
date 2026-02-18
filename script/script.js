@@ -1,8 +1,12 @@
 const logins = document.querySelectorAll(".login-link");
 const signups = document.querySelectorAll(".signup-link");
+const recovery_password = document.querySelector(".forgot-password");
+
+const back_to_login = document.querySelector(".back-login");
 
 const login_form = document.querySelector(".login-form");
 const signup_form = document.querySelector(".signup-form");
+const recovery_form = document.querySelector(".recovery-form");
 
 
 logins.forEach(function(login) {
@@ -19,4 +23,15 @@ signups.forEach(function(signup) {
         login_form.style.display = 'none';
 
     });
+});
+
+recovery_password.addEventListener('click', function(event) {
+    recovery_form.style.display = 'flex';
+    signup_form.style.display = 'none';
+    login_form.style.display = 'none';
+
+});
+
+back_to_login.addEventListener('click', function(event) {
+    
 });
