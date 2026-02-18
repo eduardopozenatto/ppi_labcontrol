@@ -33,7 +33,8 @@ h1 {
 /* Section que contém os formulários de login e cadastro */
 
 .login-form,
-.signup-form {
+.signup-form,
+.recovery-form {
     display: flex;
     flex-flow: column wrap;
     border: 1px solid var(--faded-azure-color);
@@ -45,14 +46,16 @@ h1 {
     align-items: center;
 }
 
-.signup-form {
+.signup-form,
+.login-form {
     display: none;
 }
 
 /* Div que contém os títulos de cadastro e login */
 
 .login-form > div,
-.signup-form > div {
+.signup-form > div,
+ .recovery-form > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +65,9 @@ h1 {
 /* Botões de login e cadastro */
 
 #login-title,
-#signup-title {
+#signup-title,
+.recovery-password-title,
+.back-title {
     margin-top: 8px;
     display: flex;
     font-size: 8px;
@@ -71,11 +76,14 @@ h1 {
 }
 
 #login-title > a,
-#signup-title > a {
+#signup-title > a,
+.recovery-password-title > a,
+.back-title {
     text-decoration: none;
 }
 
-#login-title {
+#login-title,
+.recovery-password-title {
     border: none;
     display: flex;
     padding: 5px;
@@ -87,16 +95,19 @@ h1 {
     transition: background-color 0.5s ease;
 }
 
-#login-title:hover {
+#login-title:hover,
+.recovery-password-title:hover {
     background-color: var(--azure-pastel-color-focus);
 }
 
-#login-title > a {
+#login-title > a,
+.recovery-password-title > a {
     color: white;
     transition: color 0.5s ease;
 }
 
-#login-title:hover > a {
+#login-title:hover > a,
+.recovery-password-title:hover > a {
     color: whitesmoke;
 }
 
@@ -105,12 +116,14 @@ h1 {
     border: none; 
 }
 
-#signup-title > a {
+#signup-title > a,
+.back-title {
     color: var(--faded-azure-color);
     transition: color 0.5s ease;
 }
 
-#signup-title:hover > a {
+#signup-title:hover > a,
+.back-title:hover {
     color: var(--gray-azure-color);
 }
 
