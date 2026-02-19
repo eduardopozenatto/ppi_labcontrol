@@ -133,16 +133,14 @@ h1 {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 8px;
-    display: flex;
+    padding: 0px;
+    width: 50px;
     justify-content: center;
     align-items: center;
     font-size: 8px;
+    border: none;
     background-color: white;
-    border: none; 
-}
-
-#back-title.button {
-
+    border-radius: var(--border-radius);
 }
 
 .button > a {
@@ -313,4 +311,19 @@ input[type="number"] {
     display: inline-block;
     text-decoration: none;
     transition: text-decoration 0.3s ease;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
