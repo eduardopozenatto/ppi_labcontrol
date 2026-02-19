@@ -69,39 +69,35 @@ h1 {
     gap: 5px;
 }
 
-/* Botões de login e cadastro */
+/* componentes dos botões */
 
-.highlighted-button {
+.highlighted-button,
+.sm-highlighted-button,
+.button {
     display: flex;
-    border: none;
-    border-radius: var(--border-radius);
     flex-wrap: nowrap;
-    padding: 5px;
-    width: 50px;
-    margin-top: 8px;
-    display: flex;
-    font-size: 8px;
     justify-content: center;
     align-items: center;
+    margin-top: 8px;
+    padding: 5px;
+    width: 50px;
+    font-size: 8px;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.highlighted-button,
+.sm-highlighted-button {
     background-color: var(--azure-pastel-color);
     transition: background-color 0.3s ease;
 }
 
 .sm-highlighted-button {
-    display: flex;
-    border: none;
-    border-radius: var(--border-radius);
-    flex-wrap: nowrap;
-    padding: 5px;
-    width: 50px;
-    margin-top: 8px;
-    display: flex;
     font-size: 5px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--azure-pastel-color);
-    transition: background-color 0.3s ease;
+}
 
+.button {
+    background-color: white;
 }
 
 .sm-highlighted-button.send-link {
@@ -115,6 +111,15 @@ h1 {
     
 }
 
+.button > a {
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: var(--faded-azure-color);
+    transition: color 0.3s ease;
+
+}
+
 .highlighted-button:hover,
 .sm-highlighted-button:hover {
     background-color: var(--azure-pastel-color-focus);
@@ -125,35 +130,12 @@ h1 {
     color: whitesmoke;
 }
 
-.highlighted-button.recovery-password-title {
-    width: 100px;
-}
-
-.button {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 8px;
-    padding: 0px;
-    width: 50px;
-    justify-content: center;
-    align-items: center;
-    font-size: 8px;
-    border: none;
-    background-color: white;
-    border-radius: var(--border-radius);
-}
-
-.button > a {
-    display: flex;
-    flex-wrap: nowrap;
-    text-decoration: none;
-    color: var(--faded-azure-color);
-    transition: color 0.3s ease;
-
-}
-
 .button:hover > a {
     color: var(--gray-azure-color);
+}
+
+.highlighted-button.recovery-password-title {
+    width: 100px;
 }
 
 /* Formulário que contém os inputs */
