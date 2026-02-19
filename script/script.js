@@ -2,7 +2,7 @@ const logins = document.querySelectorAll(".login-link");
 const signups = document.querySelectorAll(".signup-link");
 const recovery_password = document.querySelector(".forgot-password");
 
-const back_to_login = document.querySelector(".back-login");
+const back_to_login = document.querySelector(".back-title");
 
 const login_form = document.querySelector(".login-form");
 const signup_form = document.querySelector(".signup-form");
@@ -33,5 +33,7 @@ recovery_password.addEventListener('click', function(event) {
 });
 
 back_to_login.addEventListener('click', function(event) {
-    
+    login_form.style.display = 'flex';
+    signup_form.style.display = 'none';
+    recovery_form.style.display = 'none';
 });

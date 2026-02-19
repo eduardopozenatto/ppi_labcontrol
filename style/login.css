@@ -64,6 +64,32 @@ h1 {
 
 /* Botões de login e cadastro */
 
+.button {
+    display: flex;
+    border: none;
+    border-radius: var(--border-radius);
+    flex-wrap: nowrap;
+    padding: 5px;
+    width: 50px;
+    margin-top: 8px;
+    display: flex;
+    font-size: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azure-pastel-color);
+    transition: background-color 0.3s ease;
+}
+
+.button > a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.button:hover {
+    background-color: var(--azure-pastel-color-focus);
+}
+
 #login-title,
 #signup-title,
 .recovery-password-title,
@@ -97,11 +123,6 @@ h1 {
     background-color: var(--azure-pastel-color);
     border-radius: var(--border-radius);
     transition: background-color 0.5s ease;
-}
-
-#login-title:hover,
-.recovery-password-title:hover {
-    background-color: var(--azure-pastel-color-focus);
 }
 
 #login-title > a,
@@ -164,7 +185,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 175px;
     font-size: 5px;
     padding-left: 5px;
     height: 15px;
