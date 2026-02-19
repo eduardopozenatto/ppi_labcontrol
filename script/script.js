@@ -27,7 +27,7 @@ signups.forEach(function(signup) {
         signup.addEventListener('click', function(event) {  
         signup_form.style.display = 'flex';
         login_form.style.display = 'none';
-
+    
     });
 });
 
