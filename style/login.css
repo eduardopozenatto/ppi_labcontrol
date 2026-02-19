@@ -45,6 +45,9 @@ h1 {
     justify-content: start;
     align-items: center;
 }
+.recovery-form {
+    width: 200px;
+}
 
 .signup-form,
 .login-form {
@@ -62,9 +65,13 @@ h1 {
     gap: 15px;
 }
 
+.recovery-form > div {
+    gap: 5px;
+}
+
 /* Botões de login e cadastro */
 
-.button {
+.highlighted-button {
     display: flex;
     border: none;
     border-radius: var(--border-radius);
@@ -80,80 +87,75 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-.button > a {
+.sm-highlighted-button {
+    display: flex;
+    border: none;
+    border-radius: var(--border-radius);
+    flex-wrap: nowrap;
+    padding: 5px;
+    width: 50px;
+    margin-top: 8px;
+    display: flex;
+    font-size: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azure-pastel-color);
+    transition: background-color 0.3s ease;
+
+}
+
+.sm-highlighted-button.send-link {
+    margin-bottom: 8px;
+}
+
+.highlighted-button > a,
+.sm-highlighted-button > a {
     color: white;
     text-decoration: none;
     
 }
 
-.button:hover {
+.highlighted-button:hover,
+.sm-highlighted-button:hover {
     background-color: var(--azure-pastel-color-focus);
 }
 
-#login-title,
-#signup-title,
-.recovery-password-title,
-.back-title {
+.highlighted-button:hover > a,
+.sm-highlighted-button:hover > a {
+    color: whitesmoke;
+}
+
+.highlighted-button.recovery-password-title {
+    width: 100px;
+}
+
+.button {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 8px;
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 8px;
-    justify-content: center;
-    align-items: center;
-}
-
-#login-title > a,
-#signup-title > a,
-.recovery-password-title > a,
-.back-title {
-    display: flex;
-    flex-wrap: nowrap;
-    text-decoration: none;
-}
-
-#login-title,
-.recovery-password-title {
-    border: none;
-    display: flex;
-    padding: 5px;
-    width: 50px;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--azure-pastel-color);
-    border-radius: var(--border-radius);
-    transition: background-color 0.5s ease;
-}
-
-#login-title > a,
-.recovery-password-title > a {
-    color: white;
-    transition: color 0.5s ease;
-}
-
-#login-title:hover > a,
-.recovery-password-title:hover > a {
-    color: whitesmoke;
-}
-
-#signup-title {
     background-color: white;
     border: none; 
 }
 
-#signup-title > a,
-.back-title {
+#back-title.button {
+
+}
+
+.button > a {
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
     color: var(--faded-azure-color);
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
+
 }
 
-#signup-title:hover > a,
-.back-title:hover {
+.button:hover > a {
     color: var(--gray-azure-color);
-}
-
-.recovery-password-title {
-    width: 100px;
 }
 
 /* Formulário que contém os inputs */
@@ -275,13 +277,11 @@ input[type="number"] {
     margin: 10px 0 10px 0;
 }
 
-.entry-link,
+/* .entry-link,
 .signin-link,
 .send-link {
-    color: whitesmoke;
-    text-decoration: none;
-    transition: color 0.5s ease;
-}
+    
+} */
 
 .entry-button:hover,
 .signup-button:hover,

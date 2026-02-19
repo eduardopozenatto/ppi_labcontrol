@@ -2,7 +2,7 @@ const logins = document.querySelectorAll(".login-link");
 const signups = document.querySelectorAll(".signup-link");
 const recovery_password = document.querySelector(".forgot-password");
 
-const back_to_login = document.querySelector(".back-title");
+const back_to_login = document.getElementById("back-title");
 
 const login_form = document.querySelector(".login-form");
 const signup_form = document.querySelector(".signup-form");
